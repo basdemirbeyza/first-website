@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bize Ulaşın</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+        function onSubmitForm() {
+            var result = confirm('Form gönderilsin mi?');
+            if (result) {
+                alert('Form gönderildi.');
+                return true;
+            } else {
+                alert('Form gönderilemedi.');
+                return false;
+            }
+        }
+    </script>
+</head>
+<body style="background-color: rgb(237, 219, 221)">
+    <div>
+        <nav>
+            <div class="navbar1">
+                <img src="logo.png" alt="yemek resmi">
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="yemektarifleri.html">Yemek Tarifleri</a></li>
+                    <li><a href="gununmenusu.html">Günün Menüsü</a></li>
+                    <li><a href="bizeulasin.html">Bize Ulaşın</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <h2 style="margin-left: 30px;">Bize Ulaşın</h2>
+    <div class="forum">
+        <form action="javascript:void(0)" method="post" onsubmit="return onSubmitForm()" style="padding: 10px;">
+            <label for="fname">Adınız:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Soyadınız:</label><br>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Mesajınız:</label><br>
+            <textarea id="message" name="message"></textarea><br><br>
+            <input type="submit" value="Gönder">
+        </form>
+    </div>
+      
+</body>
+</html>
